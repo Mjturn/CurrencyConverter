@@ -20,6 +20,10 @@ int main() {
             printf("How much money would you like to convert?\n");
             float amount;
             scanf("%f", &amount);
+            if(amount < 0) {
+                printf("Please enter a positive amount.\n");
+                main();
+            }
             printf("%0.2f\n", convert(convertFrom, convertTo, amount));
             main();
         }
